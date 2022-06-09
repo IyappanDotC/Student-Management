@@ -22,7 +22,9 @@ namespace Student_Management
 
                     using (SqlConnection Sqlconnection = new SqlConnection(Con))
                     {
-                        SqlDataAdapter myada = new SqlDataAdapter("select * from Students ", Sqlconnection);
+                        SqlDataAdapter myada = new SqlDataAdapter("AllStudents", Sqlconnection);
+                        
+                        
                         myada.Fill(MyTable);
                     }
 

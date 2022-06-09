@@ -34,13 +34,10 @@
                         <a class="nav-link active " href="Student_Regstration.aspx">Student Regstration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="StudentList.aspx">StudentS List</a>
+                        <a class="nav-link " href="StudentList.aspx">Students List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="Students.aspx">Delete Student </a>
-                    </li>
-                    <li class="nav-item">
-                    <a href="#"><span class="fa fa-american-sign-language-interpreting"></span> Sign Up</a>
                     </li>
                 </ul>
             </div>
