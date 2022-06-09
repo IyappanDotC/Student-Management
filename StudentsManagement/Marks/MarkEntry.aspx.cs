@@ -13,7 +13,6 @@ namespace Student_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 DataTable MyTable = new DataTable();
@@ -55,7 +54,7 @@ namespace Student_Management
             }
 
             ddsub.DataTextField = "SubjectName";
-            ddsub.DataValueField = "DepartmentID";
+            ddsub.DataValueField = "DepID";
             ddsub.DataSource = MyTablee;
             ddsub.DataBind();
         }
