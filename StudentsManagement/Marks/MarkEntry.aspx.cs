@@ -20,7 +20,7 @@ namespace Student_Management
 
                 using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
                 {
-                    SqlDataAdapter myada = new SqlDataAdapter("select * from Students ", Sqlconnection);
+                    SqlDataAdapter myada = new SqlDataAdapter("select * from Students ",Sqlconnection);
                     myada.Fill(MyTable);
                 }
                 ddname.DataTextField = "Name";
