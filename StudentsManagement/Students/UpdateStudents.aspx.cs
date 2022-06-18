@@ -56,6 +56,12 @@ namespace Student_Management.StudentsManagement.Students
 
                 lblName.Text = MyTable.Rows[0]["Name"].ToString();
                 lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
+                LblMobile.Text = MyTable.Rows[0]["Mobile"].ToString();
+                LblDep.Text = MyTable.Rows[0]["Departments"].ToString();
+                LblDate.Text = MyTable.Rows[0]["JoinDate"].ToString();
+                lblName.Text = MyTable.Rows[0]["Name"].ToString();
+                lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
+                lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
             }
 
 
@@ -79,8 +85,8 @@ namespace Student_Management.StudentsManagement.Students
                 MyCmd.Parameters.AddWithValue("@name", txtName.Text);
                 MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
                 MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
-                MyCmd.Parameters.AddWithValue("@Batch", txtEmail.Text);
-                MyCmd.Parameters.AddWithValue("@@Gender", DdGen.SelectedValue);
+                MyCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                MyCmd.Parameters.AddWithValue("@Gender", DdGen.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Joindate", txtDateofJo.Text);
                 MyCmd.Parameters.AddWithValue("@Active", true);

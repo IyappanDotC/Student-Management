@@ -68,6 +68,9 @@ namespace Student_Management
                             MyCmd.ExecuteNonQuery();
 
                             Sqlconnection.Close();
+                            LblName.Text = "";
+                            LblBatch.Text = "";
+
                        }
                      }
                    }
