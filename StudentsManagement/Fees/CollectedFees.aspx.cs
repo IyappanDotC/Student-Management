@@ -20,7 +20,7 @@ namespace Student_Management
 
                 using (SqlConnection Sqlconnection = new SqlConnection(Con))
                 {
-                    SqlDataAdapter myada = new SqlDataAdapter("select StudentName as Name , Semester , Amount , Departments as Department  from SemFees a join Students b on a.StudentID =b.StudentID join Departments c on b.DepartmentID=c.DepartmentID", Sqlconnection);
+                    SqlDataAdapter myada = new SqlDataAdapter("CollectedFees", Sqlconnection);
                     myada.Fill(MyTable);
                 }
 

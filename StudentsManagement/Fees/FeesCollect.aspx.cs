@@ -1,16 +1,11 @@
-﻿using Student_Management.Repository;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Student_Management
 {
-    public partial class FeesCollect : System.Web.UI.Page , fEESSD
+    public partial class FeesCollect : System.Web.UI.Page 
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,12 +16,12 @@ namespace Student_Management
 
                 using (SqlConnection Sqlconnection = new SqlConnection(Con))
                 {
-                    SqlDataAdapter myada = new SqlDataAdapter("select * from Students", Sqlconnection);
+                    SqlDataAdapter myada = new SqlDataAdapter("AllStudents", Sqlconnection);
                     myada.Fill(MyTable);
                 }
 
-                ddname.DataTextField = "StudentName";
-                ddname.DataValueField = "StudentID";
+                ddname.DataTextField = "Name";
+                ddname.DataValueField = "StuID";
                 ddname.DataSource = MyTable;
                 ddname.DataBind();
             }
@@ -41,12 +36,11 @@ namespace Student_Management
             {
                 sqlconnection.Open();
 
-                string InstQ = " insert into SemFees (StuID , Semester ,Amount) Values (@StuID , @Semester ,@Amount)";
-                SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
+                SqlCommand MyCmd = new SqlCommand("InsertFees", sqlconnection);
                 MyCmd.Parameters.AddWithValue("@StuID", ddname.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Semester", DdSem.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Amount", txtAmount.Text);
-
+                MyCmd.CommandType = CommandType.StoredProcedure;
                 MyCmd.ExecuteNonQuery();
 
                 sqlconnection.Close();
@@ -54,13 +48,6 @@ namespace Student_Management
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert(' Fees Collected')", true);
                 txtAmount.Text = "";
             }
-            
-
-        }
-
-        public void FeeCollect()
-        {
-            throw new NotImplementedException();
         }
     }
     }

@@ -32,7 +32,7 @@
                         <a class="nav-link active " href="StudentList.aspx">Students List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="Students.aspx">Delete Student </a>
+                        <a class="nav-link " href="Students.aspx">Students</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
         
         <div class="align-content-center">  
             <table class=
-                "table-hover     "
+                "table-hover     ">
         <asp:GridView ID="StudentsGrid"  CssClass=" table table-hover" runat="server"></asp:GridView>
                 </table>
             </div>

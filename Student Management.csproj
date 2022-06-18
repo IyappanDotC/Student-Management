@@ -234,6 +234,7 @@
     <Content Include="StudentsManagement\Students\StudentsDel.aspx" />
     <Content Include="StudentsManagement\Students\Student_Regstration.aspx" />
     <Content Include="StudentsManagement\Students\StudentList.aspx" />
+    <Content Include="StudentsManagement\Students\UpdateStudents.aspx" />
     <Content Include="StudentsManagement\StyleSheet1.css" />
     <Content Include="StudentsManagement\Subjects\SubjectsEntry.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -416,9 +417,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Repository\FeesRepo.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="StudentsManagement\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -537,6 +535,13 @@
     </Compile>
     <Compile Include="StudentsManagement\Students\StudentsDel.aspx.designer.cs">
       <DependentUpon>StudentsDel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsManagement\Students\UpdateStudents.aspx.cs">
+      <DependentUpon>UpdateStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsManagement\Students\UpdateStudents.aspx.designer.cs">
+      <DependentUpon>UpdateStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

@@ -33,7 +33,7 @@
                         <a class="nav-link " href="../Students/StudentList.aspx">Student List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="../Students/Students.aspx">Delete Students </a>
+                        <a class="nav-link active " href="../Students/Students.aspx">Students</a>
                     </li>
                 </ul>
             </div>
@@ -51,12 +51,12 @@
             
             <div class="container-sm">
        <div class="row">
-           <div class="col-md-8" >
+           <div class="col-md-10" >
         
         <div class="align-content-center">  
             <table class=
                 "table-hover     ">
-        <asp:GridView ID="GridView"  CssClass=" table table-hover" AllowPaging="true" PageSize="5" OnPageIndexChanging="GridView_PageIndexChanging" AutoGenerateColumns="false" runat="server">
+        <asp:GridView ID="GridView"  CssClass=" table table-hover" AllowPaging="true" PageSize="5"  AutoGenerateColumns="false" runat="server">
         <Columns>
 
             <asp:BoundField DataField="Name" HeaderText="Name"  />
@@ -65,7 +65,13 @@
             <asp:BoundField DataField="JoinDate" HeaderText="JoinDate" />
             <asp:BoundField DataField="Department" HeaderText="Department" />
 
-             <asp:TemplateField HeaderText="Student" ControlStyle-CssClass="btn btn-danger" >
+             <asp:TemplateField HeaderText="Update" ControlStyle-CssClass="btn btn-dark" >
+     <ItemTemplate>
+                <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/StudentsManagement/Students/UpdateStudents.aspx?ID={0}",
+                    HttpUtility.HtmlEncode (Eval("ID").ToString()))%>'>Update Student</asp:HyperLink>
+     </ItemTemplate>
+      </asp:TemplateField>   
+            <asp:TemplateField HeaderText="Delete" ControlStyle-CssClass="btn btn-danger" >
      <ItemTemplate>
                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/StudentsManagement/Students/StudentsDel.aspx?ID={0}",
                     HttpUtility.HtmlEncode (Eval("ID").ToString()))%>'>Delete Student</asp:HyperLink>
