@@ -39,6 +39,8 @@ namespace Student_Management
                 MyCmd.Parameters.AddWithValue("@name", txtName.Text);
                 MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
                 MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
+                MyCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                MyCmd.Parameters.AddWithValue("@Gener", DdGen.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@JoinDate", txtDateofJo.Text);
                 MyCmd.Parameters.AddWithValue("@Active", true);

@@ -40,7 +40,7 @@ namespace Student_Management.StudentsManagement.Students
             DataTable MyTable = new DataTable();
 
 
-            string MYQ = "Select StuID , a.Name as Name , Mobile, Batch , b.Name as Departments ,Joindate from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
+            string MYQ = "Select StuID , a.Name as Name , Mobile, Email, Gender, Batch , b.Name as Departments ,Joindate from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
@@ -69,7 +69,7 @@ namespace Student_Management.StudentsManagement.Students
         {
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
-                string UpdQ = "Update students set Name = @name , Mobile=@Mobile ,Batch=@Batch ,DepartmentID=@DepartmentID , Joindate=@Joindate, Active=@Active where StuID=@ID";
+                string UpdQ = "Update students set Name = @name , Mobile=@Mobile ,Batch=@Batch ,Email=@Email, Gender=@Gender ,DepartmentID=@DepartmentID , Joindate=@Joindate, Active=@Active where StuID=@ID";
                 SqlCommand MyCmd = new SqlCommand(UpdQ, Sqlconnection);
                 Sqlconnection.Open();
 
@@ -79,6 +79,8 @@ namespace Student_Management.StudentsManagement.Students
                 MyCmd.Parameters.AddWithValue("@name", txtName.Text);
                 MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
                 MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
+                MyCmd.Parameters.AddWithValue("@Batch", txtEmail.Text);
+                MyCmd.Parameters.AddWithValue("@@Gender", DdGen.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@Joindate", txtDateofJo.Text);
                 MyCmd.Parameters.AddWithValue("@Active", true);
@@ -96,6 +98,7 @@ namespace Student_Management.StudentsManagement.Students
             txtContact.Text = "";
             txtBatch.Text = "";
             txtDateofJo.Text = "";
+            txtEmail.Text = "";
         }
     }
 }

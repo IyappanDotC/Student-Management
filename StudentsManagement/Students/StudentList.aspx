@@ -45,9 +45,9 @@
     <br />
     <form id="form1" runat="server">
         <center>
-            <div class="container-md">
+            <div class="container">
        <div class="row">
-           <div class="col-md-8" >
+           <div class="col-md-12" >
         
         <div class="align-content-center">  
             <table class=

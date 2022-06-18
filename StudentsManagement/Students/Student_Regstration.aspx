@@ -60,22 +60,45 @@
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1">Name</td>
-                                    <td><asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="28px" Width="187px"></asp:TextBox></td>
+                                    <td>
+                                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1">Contact</td>
-                                    <td><asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="28px" Width="188px"></asp:TextBox></td>
+                                    <td>
+                                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td></td>
                                 </tr>
-
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="auto-style1">Email</td>
+                                    <td>
+                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="auto-style1">Gender</td>
+                                    <td>
+                                        <asp:DropDownList ID="DdGen" runat="server" CssClass="form-select" Height="35px" Width="288px">
+                                            <asp:ListItem Text="Select Gender" Value=""></asp:ListItem>
+                                            <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
+                                            <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
+                                            <asp:ListItem Text="Others" Value="Others"></asp:ListItem>
+                                        </asp:DropDownList></td>
+                                    <td></td>
+                                </tr>
                                 <tr>
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1">Batch</td>
-                                    <td><asp:TextBox ID="txtBatch" runat="server" CssClass="form-control"  Height="28px" Width="188px"></asp:TextBox></td>
+                                    <td>
+                                        <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td></td>
                                 </tr>
 
@@ -83,7 +106,8 @@
                                     <td class="auto-style4"></td>
                                     <td class="auto-style4"></td>
                                     <td class="auto-style5">Department</td>
-                                    <td class="auto-style4"><asp:DropDownList ID="ddDepart" runat="server"   Font-Size="Small" CssClass="form-select" Height="28px" Width="192px" AutoPostBack="True"></asp:DropDownList></td>
+                                    <td class="auto-style4">
+                                        <asp:DropDownList ID="ddDepart" runat="server" Font-Size="Small" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList></td>
                                     <td class="auto-style4"></td>
                                 </tr>
 
@@ -91,7 +115,8 @@
                                     <td class="auto-style2"></td>
                                     <td class="auto-style2"></td>
                                     <td class="auto-style3">Date Of Join</td>
-                                    <td class="auto-style2"><asp:TextBox ID="txtDateofJo" runat="server" CssClass="form-control" TextMode="Date" Height="25px" Width="187px"></asp:TextBox></td>
+                                    <td class="auto-style2">
+                                        <asp:TextBox ID="txtDateofJo" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td class="auto-style2"></td>
                                 </tr>
 
@@ -99,7 +124,8 @@
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1"></td>
-                                    <td><asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Register Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
+                                    <td>
+                                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Register Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
                                     <td></td>
                                 </tr>
                             </table>
