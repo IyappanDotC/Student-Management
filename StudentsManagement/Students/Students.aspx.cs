@@ -13,22 +13,28 @@ namespace Student_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Con = @"Data Source=.;Initial Catalog=STMT ;Integrated Security=SSPI";
-                    if (!IsPostBack)
+            try
+            {
+                string Con = @"Data Source=.;Initial Catalog=STMT ;Integrated Security=SSPI";
+                if (!IsPostBack)
+                {
+                    DataTable MyTable = new DataTable();
+
+                    using (SqlConnection Sqlconnection = new SqlConnection(Con))
                     {
-                        DataTable MyTable = new DataTable();
-
-                        using (SqlConnection Sqlconnection = new SqlConnection(Con))
-                        {
-                            SqlDataAdapter myada = new SqlDataAdapter("select StuID as ID , a.Name as Name , Mobile ,Batch , JoinDate as JoinDate, b.Name as Department from Students a join Departments b on a.DepartmentID = b.DepID", Sqlconnection);
-                            myada.Fill(MyTable);
-                        }
-
-                        GridView.DataSource = MyTable;
-                        GridView.DataBind();
+                        SqlDataAdapter myada = new SqlDataAdapter("select StuID as ID , a.Name as Name , Mobile ,Batch , DOB , b.Name as Department from Students a join Departments b on a.DepartmentID = b.DepID", Sqlconnection);
+                        myada.Fill(MyTable);
                     }
+
+                    GridView.DataSource = MyTable;
+                    GridView.DataBind();
                 }
-            
+            }
+            catch
+            {
+                txtError.Text = "error in loading database please check later ";
+            }
+        }
     }
 }
 

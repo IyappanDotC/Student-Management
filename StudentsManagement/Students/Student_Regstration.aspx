@@ -49,11 +49,12 @@
         <p>Student Registration - Fill The Form And Register Students </p>
     </div>
     <br />
-    <div class="container-sm">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="align-content-center">
-                    <form id="form1" runat="server">
+    <form id="form1" runat="server">
+        <div class="container-sm">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="align-content-center">
+
                         <div>
                             <table class="table table-borderless">
                                 <tr>
@@ -67,12 +68,20 @@
                                 <tr>
                                     <td></td>
                                     <td></td>
+                                    <td class="auto-style1">Guardian Name</td>
+                                    <td>
+                                        <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
                                     <td class="auto-style1">Contact</td>
                                     <td>
                                         <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td></td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1">Email</td>
@@ -114,9 +123,18 @@
                                 <tr>
                                     <td class="auto-style2"></td>
                                     <td class="auto-style2"></td>
-                                    <td class="auto-style3">Date Of Join</td>
+                                    <td class="auto-style3">DOB</td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txtDateofJo" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox></td>
+                                    <td class="auto-style2"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="auto-style2"></td>
+                                    <td class="auto-style2"></td>
+                                    <td class="auto-style3">Address</td>
+                                    <td class="auto-style2">
+                                        <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
                                     <td class="auto-style2"></td>
                                 </tr>
 
@@ -130,10 +148,10 @@
                                 </tr>
                             </table>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>

@@ -37,12 +37,14 @@ namespace Student_Management
                 string InstQ = "InsertStudents";
                 SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
                 MyCmd.Parameters.AddWithValue("@name", txtName.Text);
+                MyCmd.Parameters.AddWithValue("@GardName ", txtGardName.Text);
                 MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
                 MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
                 MyCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                MyCmd.Parameters.AddWithValue("@Gener", DdGen.SelectedValue);
+                MyCmd.Parameters.AddWithValue("@Gender", DdGen.SelectedValue);
                 MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
-                MyCmd.Parameters.AddWithValue("@JoinDate", txtDateofJo.Text);
+                MyCmd.Parameters.AddWithValue("@DOB", txtDOB.Text);
+                MyCmd.Parameters.AddWithValue("@Address", txtAddress.Text);
                 MyCmd.Parameters.AddWithValue("@Active", true);
                 MyCmd.CommandType = CommandType.StoredProcedure;
                 MyCmd.ExecuteNonQuery();
@@ -57,7 +59,9 @@ namespace Student_Management
             txtName.Text = "";
             txtContact.Text = "";
             txtBatch.Text = "";
-            txtDateofJo.Text = "";
+            txtGardName.Text = "";
+            txtDOB.Text = "";
+            txtAddress.Text = "";
         }
         private string MyConnection()
         {

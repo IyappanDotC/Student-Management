@@ -62,7 +62,7 @@
             <asp:BoundField DataField="Name" HeaderText="Name"  />
             <asp:BoundField DataField="Mobile" HeaderText="ContactNo" />
             <asp:BoundField DataField="Batch" HeaderText="Batch" />
-            <asp:BoundField DataField="JoinDate" HeaderText="JoinDate" />
+            <asp:BoundField DataField="DOB" HeaderText="JoinDate" />
             <asp:BoundField DataField="Department" HeaderText="Department" />
 
              <asp:TemplateField HeaderText="Update" ControlStyle-CssClass="btn btn-dark" >
@@ -88,6 +88,11 @@
            </div>
                  
           </center>
+         <center>
+        <div>
+            <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
+       </div>
+      </center>
          
         <div>
        </div>

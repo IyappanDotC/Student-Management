@@ -16,6 +16,7 @@ namespace Student_Management
             string Con = @"Data Source=.;Initial Catalog=STMT ;Integrated Security=SSPI";
             if (!IsPostBack)
             {
+                
                 try
                 {
                     DataTable MyTable = new DataTable();
@@ -33,7 +34,7 @@ namespace Student_Management
                 }
                 catch
                 {
-                    txtError.Text = "error in loading database please check later ";
+                    txtError.Text = "Error in loading database please check later ";
                 }
 
 

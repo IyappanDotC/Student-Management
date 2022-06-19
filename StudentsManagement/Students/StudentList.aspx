@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">                  
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link  " href="../Students/Student_Regstration.aspx">Students Regstration</a>
                     </li>
@@ -36,7 +36,7 @@
                     </li>
                 </ul>
             </div>
-            </div>
+        </div>
     </nav>
     <div class="container-fluid mt-3">
         <h3>Students Management</h3>
@@ -45,7 +45,7 @@
     <br />
     <form id="form1" runat="server">
         <center>
-            <div class="container">
+            <div class="container-fluid">
        <div class="row">
            <div class="col-md-12" >
         
@@ -59,11 +59,23 @@
             </div>
            </div>
           </center>
-         <center>
+        <center>
+             
+         <div class="toast show">
+    <div class="toast-header">
+      <strong class="me-auto">Toast Header</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p><asp:Label ID="txtError" runat="server" Text=""></asp:Label></p>
+    </div>
+  </div>
+ 
+         </center>
         <div>
-            <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
+            <asp:Label ID="f" runat="server" Text=""></asp:Label>
        </div>
-      </center>
+     
     </form>
 </body>
 </html>
