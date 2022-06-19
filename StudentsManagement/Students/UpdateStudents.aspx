@@ -63,7 +63,7 @@
                                     <td></td>
                                     <td class="auto-style1">Full Name</td>
                                     <td>
-                                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtName"  CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox></td>
 
                                     <td></td>
                                 </tr>
