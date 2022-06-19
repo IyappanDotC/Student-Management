@@ -32,7 +32,7 @@ namespace Student_Management.StudentsManagement.Fees
             DataTable MyTable = new DataTable();
 
 
-            string MYQ = "Select FeesID , StudentName as Name ,Semester , Amount , Batch ,c.Departments As Department from SemFees a  join Students b on a.StudentID = b.StudentID  join Departments c on b.DepartmentID = c.DepartmentID  where b.StudentID= @ID";
+            string MYQ = "Select FeesID , B.Name as Name ,Semester , Amount , Batch ,c.Name As Department from SemFees a  join Students b on a.StuID = b.StuID  join Departments c on b.DepartmentID = c.DepID  where b.StuID= @ID";
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {

@@ -25,8 +25,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">                  
-                        <li class="nav-item">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
                         <a class="nav-link  " href="../Students/Student_Regstration.aspx">Collect Fees</a>
                     </li>
                     <li class="nav-item">
@@ -34,11 +34,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="../Fees/DeleteFees.aspx">Delete Fees</a>
-                   
+
                     </li>
                 </ul>
             </div>
-            </div>
+        </div>
     </nav>
 
 
@@ -58,7 +58,7 @@
             <asp:BoundField DataField="ID" HeaderText="ID"  />
             <asp:BoundField DataField="Name" HeaderText="Name" />
             <asp:BoundField DataField="Batch" HeaderText="Batch" />
-            <asp:BoundField DataField="JoinDate" HeaderText="JoinDate" />
+            <asp:BoundField DataField="DOB" HeaderText="JoinDate" />
             <asp:BoundField DataField="Department" HeaderText="Department" />
 
      
@@ -83,10 +83,10 @@
            </div>
                  
           </center>
-         
+
         <div>
-       </div>
-    
+        </div>
+
     </form>
 </body>
 </html>

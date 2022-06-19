@@ -23,12 +23,30 @@ namespace Student_Management
                         myada.Fill(MyTable);
                     }
 
-                    ddDepat.DataTextField = "Departments";
-                    ddDepat.DataValueField = "DepartmentID";
+                    ddDepat.DataTextField = "Name";
+                    ddDepat.DataValueField = "DepID";
                     ddDepat.DataSource = MyTable;
                     ddDepat.DataBind();
+                LoadGrid();
                 }
         }
+        private void LoadGrid()
+        {
+            DataTable MyTable = new DataTable();
+
+
+            string MYQ = "select * from Subjects";
+
+            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+            {
+                SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
+                myada.Fill(MyTable);
+            }
+            GridView1.DataSource = MyTable;
+            GridView1.DataBind();
+
+        }
+
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             bool CheakExist1 = CheckExist();
@@ -37,7 +55,7 @@ namespace Student_Management
                 using (SqlConnection sqlconnection = new SqlConnection(MyConnection()))
                 {
                     sqlconnection.Open();
-                    string InstQ = " insert into Subjects (SubjectName, DepartmentID) Values (@name, @DepID)";
+                    string InstQ = " insert into Subjects (SubName, DepID) Values (@name, @DepID)";
                     SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
                     MyCmd.Parameters.AddWithValue("@name", txtSubj.Text);
                     MyCmd.Parameters.AddWithValue("@DepID", ddDepat.SelectedValue);
@@ -46,6 +64,7 @@ namespace Student_Management
 
                     txtSubj.Text = "";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert(' Subject Added')", true);
+                    LoadGrid();
                 }
             }
             else
@@ -61,7 +80,7 @@ namespace Student_Management
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 Sqlconnection.Open();
-                SqlDataAdapter myada = new SqlDataAdapter("select * from Subjects where SubjectName=@name ", Sqlconnection);
+                SqlDataAdapter myada = new SqlDataAdapter("select * from Subjects where SubName=@name ", Sqlconnection);
                 myada.SelectCommand.Parameters.AddWithValue("@name", txtSubj.Text);
                 myada.Fill(MyTable);
                 Sqlconnection.Close();                

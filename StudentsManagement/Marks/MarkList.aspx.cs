@@ -21,7 +21,7 @@ namespace Student_Management.StudentsManagement.Marks
 
                 using (SqlConnection Sqlconnection = new SqlConnection(Con))
                 {
-                    SqlDataAdapter myada = new SqlDataAdapter("select b.StudentID , StudentName , Mark ,SubjectName , Departments  FROM Marks a join Students b on a.StudentID=b.StudentID join Subjects c on a.SubjectID = c.SubjectID  join Departments d on b.DepartmentID = d.DepartmentID", Sqlconnection);
+                    SqlDataAdapter myada = new SqlDataAdapter("select b.StuID , b.Name , Mark ,SubName , d.Name as Departments  FROM Marks a join Students b on a.StudentID=b.StuID join Subjects c on a.SubjectID = c.SubID  join Departments d on b.DepartmentID = d.DepID", Sqlconnection);
                     myada.Fill(MyTable);
                 }
 

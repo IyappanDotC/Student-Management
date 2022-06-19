@@ -5,16 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Fees Collection - Collect Semmester Fees From Students</title>
-
-
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
     <script src="../../Assets/BS5/bootstrap.bundle.min5.js"></script>
     <link href="../../Assets/BS5/bootstrap.min5.css" rel="stylesheet" />
-    <link href="../StyleSheet1.css" rel="stylesheet" />
+    <link href="../StyleShee t1.css" rel="stylesheet" />
 
 </head>
 <body>

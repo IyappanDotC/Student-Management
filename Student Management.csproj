@@ -209,7 +209,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
-    <Content Include="Icons\login.png" />
     <Content Include="StudentsManagement\Admin.aspx" />
     <Content Include="StudentsManagement\Fees\CollectedFees.aspx" />
     <Content Include="StudentsManagement\Fees\DeleteFees.aspx" />

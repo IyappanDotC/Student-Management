@@ -46,7 +46,8 @@
         </nav>
         <!-- Header -->
         <div class="container-fluid mt-3">
-            <h3>Students Management</h3> <p>Student Registration - Fill The Form And Register Students </p>
+            <h3>Students Management</h3>
+            <p>Student Registration - Fill The Form And Register Students </p>
         </div>
         <br />
 
@@ -56,7 +57,7 @@
                 <div class="col-md-8">
                     <div class="align-content-center">
                         <div>
-                           <table class="table table-borderless">
+                            <table class="table table-borderless">
                                 <tr>
                                     <td></td>
                                     <td></td>

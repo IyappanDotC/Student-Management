@@ -17,7 +17,7 @@ namespace Student_Management
         {
             if (!IsPostBack)
             {
-                String myQ = "Select StudentID as ID,StudentName as Name  , Batch , CONVERT(varchar(20), JoinDate,110 ) as JoinDate , Departments as Department from Students a join Departments b on a.DepartmentID = b.DepartmentID";
+                String myQ = "Select StuID as ID,A.Name as Name  , Batch , DOB , B.name as Department from Students a join Departments b on a.DepartmentID = b.DepID";
                 LoadGrid(myQ);
             }
         }

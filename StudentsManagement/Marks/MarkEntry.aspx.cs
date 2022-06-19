@@ -35,8 +35,8 @@ namespace Student_Management
                     SqlDataAdapter myada = new SqlDataAdapter("select * from Subjects ", Sqlconnection);
                     myada.Fill(MyTablee);
                 }
-                ddsub.DataTextField = "Name";
-                ddsub.DataValueField = "DepartmentID";
+                ddsub.DataTextField = "SubName";
+                ddsub.DataValueField = "DepID";
                 ddsub.DataSource = MyTablee;
                 ddsub.DataBind();
             }
@@ -45,7 +45,7 @@ namespace Student_Management
         private void SubjectBasedOnStudents(string a_StudentID)
         {
             DataTable MyTablee = new DataTable();
-            string myQ = "SELECT * from subjects a join Students b on b.DepartmentID=a.DepartmentID where b.StudentID=@StudentID";
+            string myQ = "SELECT * from subjects a join Students b on b.DepartmentID=a.DepID where b.StuID=@StudentID";
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 SqlDataAdapter myada = new SqlDataAdapter(myQ, Sqlconnection);
@@ -53,8 +53,8 @@ namespace Student_Management
                 myada.Fill(MyTablee);
             }
 
-            ddsub.DataTextField = "SubjectName";
-            ddsub.DataValueField = "DepID";
+            ddsub.DataTextField = "SubName";
+            ddsub.DataValueField = "SubID";
             ddsub.DataSource = MyTablee;
             ddsub.DataBind();
         }
