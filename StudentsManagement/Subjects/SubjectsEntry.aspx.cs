@@ -28,6 +28,7 @@ namespace Student_Management
                     ddDepat.DataSource = MyTable;
                     ddDepat.DataBind();
                 LoadGrid();
+                LoadGridDepartments();
                 }
         }
         private void LoadGrid()
@@ -35,7 +36,7 @@ namespace Student_Management
             DataTable MyTable = new DataTable();
 
 
-            string MYQ = "select * from Subjects";
+            string MYQ = "select SubName as Subjects from Subjects";
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
@@ -46,7 +47,22 @@ namespace Student_Management
             GridView1.DataBind();
 
         }
+        private void LoadGridDepartments()
+        {
+            DataTable MyTable = new DataTable();
 
+
+            string MYQ = "select Name as Departments  from Departments";
+
+            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+            {
+                SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
+                myada.Fill(MyTable);
+            }
+            GridView2.DataSource = MyTable;
+            GridView2.DataBind();
+
+        }
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
             bool CheakExist1 = CheckExist();
@@ -65,6 +81,7 @@ namespace Student_Management
                     txtSubj.Text = "";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert(' Subject Added')", true);
                     LoadGrid();
+                    LoadGridDepartments();
                 }
             }
             else

@@ -14,6 +14,7 @@
     <script src="../../Assets/BS5/bootstrap.bundle.min5.js"></script>
     <link href="../../Assets/BS5/bootstrap.min5.css" rel="stylesheet" />
     <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -59,38 +60,53 @@
                                 <td>Subject</td>
                                 <td></td>
                                 <td>
-                                    <asp:TextBox ID="txtSubj" CssClass="form-control" runat="server" Height="31px" Width="182px"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtSubj" CssClass="form-control" runat="server" Height="35px" Width="189px"></asp:TextBox></td>
                                 <td></td>
                             </tr>
-
+                               <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
                             <tr>
                                 <td></td>
                                 <td>Department</td>
                                 <td></td>
                                 <td>
-                                    <asp:DropDownList ID="ddDepat" runat="server" Height="31px" Width="189px" AutoPostBack="True"></asp:DropDownList></td>
+                                    <asp:DropDownList ID="ddDepat" CssClass="form-select" runat="server" Height="35px" Width="189px" AutoPostBack="True"></asp:DropDownList></td>
                                 <td></td>
                             </tr>
-
                             <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td>
+                                  
                                     <asp:Button ID="BtnCreate" OnClick="BtnCreate_Click" CssClass="btn btn-dark" runat="server" Text="Add Subject " />
                                 </td>
                                 <td></td>
                             </tr>
                         </table>
                     </div>
-                    <div class="col-sm-3 text-sm-center">
+                    <div class="col-sm-2 text-sm-center">
                         <h4>Subjects</h4>
+                          <hr />
                         <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server"></asp:GridView>
                     </div>
-
+                    <div class="col-sm-3 text-sm-center">
+                        <h4>All Departments</h4>
+                        <hr />
+                        <asp:GridView ID="GridView2" CssClass="table" runat="server"></asp:GridView>
+                    </div>
                 </div>
             </div>
         </div>
     </form>
+      <div class="mt-6 mb-2  bg-dark text-white text-center">
+            <p>© 2022 Copyright Reserved | Horizon Education Institute. </p>
+            <p style="font-size:smaller">Developed and Maintained By IYAPPAN C</p>
+        </div>
 </body>
 </html>
