@@ -45,7 +45,7 @@ namespace Student_Management
 
                 sqlconnection.Close();
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert(' Fees Collected')", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert(' Fees has been Collected')", true);
                 txtAmount.Text = "";
             }
         }
