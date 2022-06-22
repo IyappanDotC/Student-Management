@@ -20,6 +20,19 @@
         .auto-style1 {
             width: 128px;
         }
+        body{
+           content:'';
+           position:fixed;
+           width:100vw;
+           height:100vh;
+            background-image: url(https://globetrender.com/wp-content/uploads/2020/05/Caribbean-beach-1536x864.jpg);
+        background-repeat: no-repeat,repeat;
+        
+       
+        }
+
+
+        
     </style>
 </head>
 <body>
@@ -34,10 +47,10 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active " href="Home.aspx"> </a>
+                        <a class="nav-link active " href="Home.aspx"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="Fees/FeesCollect.aspx"> </a>
+                        <a class="nav-link " href="Fees/FeesCollect.aspx"></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="Marks/MarkEntry.aspx"></a>
@@ -45,13 +58,13 @@
                     <li class="nav-item">
                         <a class="nav-link " href="Subjects/SubjectsEntry.aspx"></a>
                     </li>
-                    
+
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link " href="SignUp.aspx">SignUp</a>
                     </li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
@@ -59,6 +72,7 @@
     <center>
     <br />
     <br />
+
     <div class="container-sm">
         <div class="row">
             <div class="col-sm-8">
@@ -68,13 +82,20 @@
     <div style="margin-top:20px">
                     <form id="form1" runat="server">
                         <div>
-                            <table class="table table-borderless">
+                            <div class="row align-content-center">
+
+                                <div class="col-md-6">
+
+
+                                </div>
+                                 <div class="col-md-6">
+                                      <table class="table">
                                 <tr>
                                     <td></td>
                                     <td></td>
                                     <td class="auto-style1">User ID</td>
                                     <td>
-                                    <asp:TextBox ID="txtUserID" runat="server" class="form-control" Height="28px" Width="187px"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtUserID" runat="server" class="form-control" Height="28px" Width="207px"></asp:TextBox></td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -82,7 +103,19 @@
                                     <td></td>
                                     <td class="auto-style1">Password</td>
                                     <td>
-                                    <asp:TextBox ID="txtPass" runat="server" Height="28px" class="form-control" TextMode="Password" Width="188px"></asp:TextBox></td>
+                                    <asp:TextBox ID="txtPass" runat="server" Height="30px" class="form-control" TextMode="Password" Width="207px"></asp:TextBox></td>
+                                    <td></td>
+                                </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="auto-style1">Role</td>
+                                    <td>
+                                    <asp:DropDownList ID="ddRole"  CssClass="form-select"  Height="33px" Width="207px" runat="server">
+                                        <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
+                                        <asp:ListItem Text="Staffs" Value="Staffs"></asp:ListItem>
+                                        <asp:ListItem Text="Students" Value="Students"></asp:ListItem>
+                                    </asp:DropDownList></td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -90,34 +123,28 @@
                                     <td></td>
                                     <td class="auto-style1"></td>
                                     <td>
-                                    <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-primary" Width="97px" Height="39px" />
+                                        <div class="d-grid">
+                                            <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Login" CssClass="btn btn-primary"   />
+                                        </div>
+                                    
                                     </td>
                                     <td></td>
                                 </tr>
                             </table>
-                        </div>
 
-                        <div class="container-sm">
-        <div class="row">
-            <div class="col-sm-8">
+                                </div>
 
-                <div class="align-content-center">
 
-                    </div>
-                </div>
-            </div>
                             </div>
+                           
+                        </div>
                     </form>
-    </div>
+                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </center>
-     <div class="mt-6 p-8 bg-dark text-white text-center  fixed-bottom" ">
-            <p>© 2022 Copyright Reserved | Horizon Education Institute. </p>
-            <p style="font-size:smaller">Developed and Maintained By IYAPPAN C</p>
-        </div>
 </body>
 
 </html>

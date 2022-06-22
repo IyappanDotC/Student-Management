@@ -12,7 +12,7 @@ namespace Student_Management.StudentsManagement
 
     public partial class Login : System.Web.UI.Page
     {
-        String MyCon = @"Data Source =.; Initial Catalog =IYDataBase; Integrated Security =SSPI ";
+        String MyCon = @"Data Source =.; Initial Catalog =STMT; Integrated Security =SSPI ";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,18 +24,14 @@ namespace Student_Management.StudentsManagement
         {
             using (SqlConnection Sqlconnection = new SqlConnection(MyCon))
 
-                if (isformVaild())
+                if (isformVaild() &&   ddRole.SelectedValue == "Admin")
                 {
-                    //Response.Write("<script>alert('Hello');</script>");
-                    if (Sqlconnection.State == ConnectionState.Closed)
-                    {
-                        Sqlconnection.Open();
-                    }
-
                     try
                     {
+                        string MyQ = "SELECT UserID , Password from UserLogin where UserID=@UserName and Password=@Password";
 
-                        SqlCommand cmd = new SqlCommand("SELECT UserID , Password from UserLogin  where UserID=@UserName and Password=@Password", Sqlconnection);
+                        SqlCommand cmd = new SqlCommand(MyQ , Sqlconnection);
+                        Sqlconnection.Open();
 
                         cmd.Parameters.AddWithValue("@UserName", txtUserID.Text.Trim());
                         cmd.Parameters.AddWithValue("@Password", txtPass.Text.Trim());
@@ -67,6 +63,47 @@ namespace Student_Management.StudentsManagement
                         Response.Write("<script>alert('" + ex.Message + "');</script>");
                     }
                 }
+            else if(isformVaild() && ddRole.SelectedValue=="Staffs")
+                {
+                    try
+                    {
+                        string MyQ = "SELECT UserID  , Password from UserLogin  where UserID=@UserName and Password=@Password";
+
+                        SqlCommand cmd = new SqlCommand(MyQ, Sqlconnection);
+                        Sqlconnection.Open();
+
+                        cmd.Parameters.AddWithValue("@UserName", txtUserID.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Password", txtPass.Text.Trim());
+                        
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                Session["UserID"] = dr.GetValue(0).ToString();
+
+                                Response.Write("<Script>alert('Login Success');</script>");
+                                Response.Redirect("~/StudentsManagement/  .aspx");
+                            }
+                        }
+                        else
+                        {
+                            Response.Write("<Script>alert('Login Failed');</script>");
+                            Response.Redirect("~/StudentsManagement/Home.aspx");
+
+                            txtUserID.Text = string.Empty;
+                            txtPass.Text = string.Empty;
+                            txtUserID.Focus();
+
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        Response.Write("<script>alert('" + ex.Message + "');</script>");
+                    }
+                }
+                
                 else
                 {
                     Response.Write("<script>alert('Invaild Login Error....');</script>");

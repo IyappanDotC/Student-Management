@@ -40,6 +40,15 @@ namespace Student_Management.StudentsManagement {
         protected global::System.Web.UI.WebControls.TextBox txtPass;
         
         /// <summary>
+        /// ddRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddRole;
+        
+        /// <summary>
         /// BtnCreate control.
         /// </summary>
         /// <remarks>
