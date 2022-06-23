@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Student Registration - Add Students info to the DataBase...</title>
+    <title>Update Student Details...</title>
     <link rel="stylesheet" href="Style Sheet1.css" />
 
     <meta charset="utf-8" />
@@ -193,7 +193,27 @@
                                     </div>
                                     <div class="col-md-4">
                                     </div>
+                                   
                                 </div>
+                                  <div class="row">
+                <div class="col-md-12">
+                    <div class="align-content-center">
+                        <table class="table-hover">
+                            <asp:GridView ID="GridView1" Visible="false" CssClass="table table-hover" AutoGenerateColumns="false" runat="server">
+                                <Columns>
+                                    <asp:BoundField DataField="StuID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="GardName" HeaderText="GaurdianName" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Mobile" HeaderText="Mobile" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Email" HeaderText="Email" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Gender" HeaderText="Gender" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Batch" HeaderText="Batch" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Departments" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="DOB" HeaderText="DOB" HeaderStyle-BackColor="WhiteSmoke" />
+                                    <asp:BoundField DataField="Address" HeaderText="Address" HeaderStyle-BackColor="WhiteSmoke" />
+                                </Columns>
+                            </asp:GridView>
+                            </table>
                             </div>
                         </div>
                     </div>

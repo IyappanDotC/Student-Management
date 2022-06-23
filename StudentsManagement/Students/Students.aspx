@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Students List - These are the Students Registered in the DataBase...</title>
+    <title>Update/Delete</title>
     <link rel="styleshe et" href="StyleSheet1.css" />
 
     <meta charset="utf-8" />

@@ -27,7 +27,7 @@ namespace Student_Management.StudentsManagement.Students
                 ddDepart.DataSource = MyTable;
                 ddDepart.DataBind();
             }
-            
+            LoadGrid();
 
         }
         private void LoadGrid()
@@ -45,7 +45,8 @@ namespace Student_Management.StudentsManagement.Students
                 myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
                 myada.Fill(MyTable);
             }
-            
+            GridView1.DataSource = MyTable;
+            GridView1.DataBind();
 
             if (MyTable.Rows.Count > 0)
             {

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Students Marks</title>
+    <title>Delete a Student </title>
     <link rel="styleshe et" href="StyleSheet1.css" />
 
     <meta charset="utf-8" />

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Student Registration - Add Students info to the DataBase...</title>
+    <title>Register a New Student..</title>
     <link rel="stylesheet" href="Style Sheet1.css" />
 
     <meta charset="utf-8" />
