@@ -65,8 +65,9 @@
                                         <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                                             ControlToValidate="txtName"
-                                            Text="First name is a required field"
+                                            Text=" This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td></td>
@@ -79,8 +80,9 @@
                                         <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
                                             ControlToValidate="txtGardName"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td></td>
@@ -93,8 +95,9 @@
                                         <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
                                             ControlToValidate="txtContact"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td></td>
@@ -107,8 +110,9 @@
                                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
                                             ControlToValidate="txtEmail"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td></td>
@@ -136,8 +140,9 @@
                                         <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
                                             ControlToValidate="txtBatch"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td></td>
@@ -162,8 +167,9 @@
                                         <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
                                             ControlToValidate="txtDOB"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                             Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td class="auto-style2"></td>
@@ -177,8 +183,9 @@
                                         <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator9"
                                             ControlToValidate="txtAddress"
-                                            Text="First name is a required field"
+                                            Text="This Field Cannot be Empty"
                                             ForeColor="red"
+                                            Font-Size="Small"
                                             runat="server"></asp:RequiredFieldValidator>
                                     </td>
                                     <td class="auto-style2"></td>
