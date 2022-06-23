@@ -40,7 +40,7 @@
             </div>
     </nav>
 
-    <div class="container-fluid mt-3">
+    <div class="container mt-3">
         <h3>Students Management</h3>
         <p><b>Students List</b> - These are the Students Registered in the DataBase... </p>
     </div>

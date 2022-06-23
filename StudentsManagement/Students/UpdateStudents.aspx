@@ -10,10 +10,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="../../Assets/BS5/bootstrap.bundle.min5.js"></script>
-    <link href="../../Assets/BS5/bootstrap.min5.css" rel="stylesheet" />
-    <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
 
+    <script src="../../Assets/Bootstrap%205.1.3/bootstrap.bundle.min5.js"></script>
+    <link href="../../Assets/Bootstrap%205.1.3/bootstrap.min5.css" rel="stylesheet" />
+    <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
     <style type="text/css">
   
     </style>
@@ -45,166 +45,157 @@
             </div>
         </nav>
         <!-- Header -->
-        <div class="container-fluid mt-3">
-            <h3>Students Management</h3>
+        <div class="container mt-3">
+            <h3>Update Student Details</h3>
             <p>Student Registration - Fill The Form And Register Students </p>
         </div>
         <br />
 
 
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="align-content-center">
-                        <div>
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Name</td>
-                                    <td>
-                                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Guardian Name</td>
-                                    <td>
-                                        <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Contact</td>
-                                    <td>
-                                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Email</td>
-                                    <td>
-                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Gender</td>
-                                    <td>
-                                        <asp:DropDownList ID="DdGen" runat="server" CssClass="form-select" Height="35px" Width="288px">
-                                            <asp:ListItem Text="Select Gender" Value=""></asp:ListItem>
-                                            <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
-                                            <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
-                                            <asp:ListItem Text="Others" Value="Others"></asp:ListItem>
-                                        </asp:DropDownList></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1">Batch</td>
-                                    <td>
-                                        <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td></td>
-                                </tr>
 
-                                <tr>
-                                    <td class="auto-style4"></td>
-                                    <td class="auto-style4"></td>
-                                    <td class="auto-style5">Department</td>
-                                    <td class="auto-style4">
-                                        <asp:DropDownList ID="ddDepart" runat="server" Font-Size="Small" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList></td>
-                                    <td class="auto-style4"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="auto-style2"></td>
-                                    <td class="auto-style2"></td>
-                                    <td class="auto-style3">DOB</td>
-                                    <td class="auto-style2">
-                                        <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td class="auto-style2"></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="auto-style2"></td>
-                                    <td class="auto-style2"></td>
-                                    <td class="auto-style3">Address</td>
-                                    <td class="auto-style2">
-                                        <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
-                                    <td class="auto-style2"></td>
-                                </tr>
-
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="auto-style1"></td>
-                                    <td>
-                                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Register Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                        </div>
-
+            <div class="container-sm">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Full Name</label>
+                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                            ControlToValidate="txtName"
+                            Text=" This Field Cannot be Empty"
+                            ForeColor="red"
+                            Font-Size="Small"
+                            runat="server"></asp:RequiredFieldValidator>
+                        <br />
                     </div>
-                </div>
-                <div class="col-md-4">
+                    <div class="col-md-4">
+                        <label>Guardian Name </label>
+                        <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                            ControlToValidate="txtGardName"
+                            Text="This Field Cannot be Empty"
+                            ForeColor="red"
+                            Font-Size="Small"
+                            runat="server"></asp:RequiredFieldValidator>
+                        <br />
+                    </div>
+                    <div class="col-md-4">
+                        <label>Contact </label>
+                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
+                            ControlToValidate="txtContact"
+                            Text="This Field Cannot be Empty"
+                            ForeColor="red"
+                            Font-Size="Small"
+                            runat="server"></asp:RequiredFieldValidator>
+                        <br />
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Email </label>
 
-                    <label>
-                        <h6>Name :  </h6>
-                    </label>
-                    <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
-                    <br />
-                    <label>
-                        <h6>Mobile :</h6>
-                    </label>
-                    <asp:Label ID="LblMobile" runat="server" Text=""></asp:Label>
-                    <br />
-                    <label>
-                        <h6>Batch :</h6>
-                    </label>
-                    <asp:Label ID="lblBatch" runat="server" Text=""></asp:Label>
-                    <br />
-                    <label>
-                        <h6>Department :</h6>
-                    </label>
-                    <asp:Label ID="LblDep" runat="server" Text=""></asp:Label>
-                    <br />
-                    <label>
-                        <h6>JoinDate : </h6>
-                    </label>
-                    <asp:Label ID="LblDate" runat="server" Text=""></asp:Label>
-                    <br />
-                    <label>
-                        <h6>Active :</h6>
-                    </label>
-                    <asp:Label ID="lblActive" runat="server" Text=""></asp:Label>
-                    <br />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="align-content-center">
-                        <table class="table-hover">
-                            <asp:GridView ID="GridView1" CssClass="table table-hover" AutoGenerateColumns="false" runat="server">
-                                <Columns>
-                                    <asp:BoundField DataField="StuID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="GardName" HeaderText="GaurdianName" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Mobile" HeaderText="Mobile" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Email" HeaderText="Email" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Gender" HeaderText="Gender" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Batch" HeaderText="Batch" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Departments" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="DOB" HeaderText="DOB" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Address" HeaderText="Address" HeaderStyle-BackColor="WhiteSmoke" />
-                                </Columns>
-                            </asp:GridView>
-                        </table>
+                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
+                                    ControlToValidate="txtEmail"
+                                    Text="This Field Cannot be Empty"
+                                    ForeColor="red"
+                                    Font-Size="Small"
+                                    runat="server"></asp:RequiredFieldValidator>
+                                <br />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Gender </label>
+                                <asp:DropDownList ID="DdGen" runat="server" CssClass="form-select" Height="35px" Width="288px">
+                                    <asp:ListItem Text="Select Gender" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
+                                    <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
+                                    <asp:ListItem Text="Others" Value="Others"></asp:ListItem>
+                                </asp:DropDownList>
+                                <br />
+                            </div>
+                            <div class="col-md-4">
+                                <label>DOB </label>
+                                <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
+                                    ControlToValidate="txtDOB"
+                                    Text="This Field Cannot be Empty"
+                                    ForeColor="red"
+                                    Font-Size="Small"
+                                    runat="server"></asp:RequiredFieldValidator>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Department </label>
+
+                                <asp:DropDownList ID="ddDepart" runat="server" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
+                                <br />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Batch </label>
+
+                                <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
+                                    ControlToValidate="txtBatch"
+                                    Text="This Field Cannot be Empty"
+                                    ForeColor="red"
+                                    Font-Size="Small"
+                                    runat="server"></asp:RequiredFieldValidator>
+                                <br />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Address </label>
+                                <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9"
+                                    ControlToValidate="txtAddress"
+                                    Text="This Field Cannot be Empty"
+                                    ForeColor="red"
+                                    Font-Size="Small"
+                                    runat="server"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text=" Update Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>
+                                            <h6>Name :  </h6>
+                                        </label>
+                                        <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                                        <br />
+                                        <label>
+                                            <h6>Mobile :</h6>
+                                        </label>
+                                        <asp:Label ID="LblMobile" runat="server" Text=""></asp:Label>
+                                        <br />
+                                        <label>
+                                            <h6>Batch :</h6>
+                                        </label>
+                                        <asp:Label ID="lblBatch" runat="server" Text=""></asp:Label>
+                                        <br />
+                                        <label>
+                                            <h6>Department :</h6>
+                                        </label>
+                                        <asp:Label ID="LblDep" runat="server" Text=""></asp:Label>
+                                        <br />
+                                        <label>
+                                            <h6>JoinDate : </h6>
+                                        </label>
+                                        <asp:Label ID="LblDate" runat="server" Text=""></asp:Label>
+                                        <br />
+                                        <label>
+                                            <h6>Active :</h6>
+                                        </label>
+                                        <asp:Label ID="lblActive" runat="server" Text=""></asp:Label>
+                                        <br />
+                                    </div>
+                                    <div class="col-md-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

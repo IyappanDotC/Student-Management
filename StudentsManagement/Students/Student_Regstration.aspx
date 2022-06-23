@@ -125,7 +125,7 @@
                         <div class="col-md-4">
                             <label>Department </label>
 
-                            <asp:DropDownList ID="ddDepart" runat="server" Font-Size="Small" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
+                            <asp:DropDownList ID="ddDepart" runat="server"   CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
                             <br />
                         </div>
                         <div class="col-md-4">
