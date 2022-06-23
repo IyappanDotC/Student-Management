@@ -14,7 +14,7 @@
     <script src="../../Assets/BS5/bootstrap.bundle.min5.js"></script>
     <link href="../../Assets/BS5/bootstrap.min5.css" rel="stylesheet" />
     <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
 
 </head>
 <body>

@@ -10,8 +10,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="../../Assets/BS5/bootstrap.bundle.min5.js"></script>
-    <link href="../../Assets/BS5/bootstrap.min5.css" rel="stylesheet" />
+    <script src="../../Assets/Bootstrap 5.1.3/bootstrap.min5.css"></script>
+    <link href="../../Assets/Bootstrap 5.1.3/bootstrap.min5.css" rel="stylesheet" />
     <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
 
     <style type="text/css">
@@ -62,7 +62,13 @@
                                     <td></td>
                                     <td class="auto-style1">Name</td>
                                     <td>
-                                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                                            ControlToValidate="txtName"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -70,7 +76,13 @@
                                     <td></td>
                                     <td class="auto-style1">Guardian Name</td>
                                     <td>
-                                        <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtGardName" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                                            ControlToValidate="txtGardName"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -78,7 +90,13 @@
                                     <td></td>
                                     <td class="auto-style1">Contact</td>
                                     <td>
-                                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3"
+                                            ControlToValidate="txtContact"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -86,7 +104,13 @@
                                     <td></td>
                                     <td class="auto-style1">Email</td>
                                     <td>
-                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4"
+                                            ControlToValidate="txtEmail"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -99,7 +123,9 @@
                                             <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
                                             <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
                                             <asp:ListItem Text="Others" Value="Others"></asp:ListItem>
-                                        </asp:DropDownList></td>
+                                        </asp:DropDownList>
+                                        
+                                    </td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -107,7 +133,13 @@
                                     <td></td>
                                     <td class="auto-style1">Batch</td>
                                     <td>
-                                        <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtBatch" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6"
+                                            ControlToValidate="txtBatch"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td></td>
                                 </tr>
 
@@ -116,7 +148,9 @@
                                     <td class="auto-style4"></td>
                                     <td class="auto-style5">Department</td>
                                     <td class="auto-style4">
-                                        <asp:DropDownList ID="ddDepart" runat="server" Font-Size="Small" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList></td>
+                                        <asp:DropDownList ID="ddDepart" runat="server" Font-Size="Small" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
+                                        
+                                    </td>
                                     <td class="auto-style4"></td>
                                 </tr>
 
@@ -125,7 +159,13 @@
                                     <td class="auto-style2"></td>
                                     <td class="auto-style3">DOB</td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8"
+                                            ControlToValidate="txtDOB"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td class="auto-style2"></td>
                                 </tr>
 
@@ -134,7 +174,13 @@
                                     <td class="auto-style2"></td>
                                     <td class="auto-style3">Address</td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox></td>
+                                        <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" Height="35px" Width="288px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator9"
+                                            ControlToValidate="txtAddress"
+                                            Text="First name is a required field"
+                                            ForeColor="red"
+                                            runat="server"></asp:RequiredFieldValidator>
+                                    </td>
                                     <td class="auto-style2"></td>
                                 </tr>
 
