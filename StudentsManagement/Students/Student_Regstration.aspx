@@ -13,10 +13,9 @@
     <script src="../../Assets/Bootstrap 5.1.3/bootstrap.min5.css"></script>
     <link href="../../Assets/Bootstrap 5.1.3/bootstrap.min5.css" rel="stylesheet" />
     <link href="../../Assets/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../Assets/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
 
-    <style type="text/css">
-  
-    </style>
 
 </head>
 <body>
@@ -125,7 +124,7 @@
                         <div class="col-md-4">
                             <label>Department </label>
 
-                            <asp:DropDownList ID="ddDepart" runat="server"   CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
+                            <asp:DropDownList ID="ddDepart" runat="server" CssClass="form-select" Height="35px" Width="288px" AutoPostBack="True"></asp:DropDownList>
                             <br />
                         </div>
                         <div class="col-md-4">

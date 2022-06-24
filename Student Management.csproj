@@ -209,6 +209,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Assets\SweetAlert\sweetalert-dev.js" />
+    <Content Include="Assets\SweetAlert\sweetalert.min.js" />
     <Content Include="StudentsManagement\Admin.aspx" />
     <Content Include="StudentsManagement\Fees\CollectedFees.aspx" />
     <Content Include="StudentsManagement\Fees\DeleteFees.aspx" />
@@ -271,6 +273,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Assets\SweetAlert\sweetalert.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

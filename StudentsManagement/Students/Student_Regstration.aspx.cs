@@ -52,7 +52,7 @@ namespace Student_Management
                     MyCmd.Parameters.AddWithValue("@Active", true);
                     MyCmd.CommandType = CommandType.StoredProcedure;
                     MyCmd.ExecuteNonQuery();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Student Registered ')", true);
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "script", "swal('Student Registered' , 'Student Added Successfully ' , 'success')", true);
                     sqlconnection.Close();
                     Clear();
 
@@ -60,7 +60,7 @@ namespace Student_Management
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Student Already Excists')", true);
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "script", "swal('Error' , 'Student Already Exsits ' , 'info')", true);
             }
         }
         private void Clear()
