@@ -72,12 +72,13 @@
           <ItemTemplate>
           <asp:CheckBox ID="ChkRow" runat="server"/>
           </ItemTemplate>
-          </asp:TemplateField>   
-              <asp:BoundField DataField="StuID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
-              <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
-              <asp:BoundField DataField="Mobile" HeaderText="ContactNo" HeaderStyle-BackColor="WhiteSmoke" />
-              <asp:BoundField DataField="Batch" HeaderText="Batch" HeaderStyle-BackColor="WhiteSmoke" />
-              <asp:BoundField DataField="Departments" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />           
+          </asp:TemplateField>  
+           <asp:BoundField DataField="StuID" HeaderText="Bus ID"  /> 
+             <asp:BoundField DataField="Name" HeaderText="Bus ID"  />
+            <asp:BoundField DataField="Mobile" HeaderText="Bus Name" />
+            <asp:BoundField DataField="Departments" HeaderText="Bus No" />
+            <asp:BoundField DataField="Batch" HeaderText="Category" />
+             
       </Columns>
       </asp:GridView> 
                      </table>
