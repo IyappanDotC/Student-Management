@@ -61,7 +61,7 @@
                         <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Height="35px" Width="288px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
                             ControlToValidate="txtName"
-                            Text=" This Field Cannot be Empty"
+                            Text="  Epty ya irukka kudathu"
                             ForeColor="red"
                             Font-Size="Small"
                             runat="server"></asp:RequiredFieldValidator>
@@ -106,10 +106,11 @@
                             <div class="col-md-4">
                                 <label>Gender </label>
                                 <asp:DropDownList ID="DdGen" runat="server" CssClass="form-select" Height="35px" Width="288px">
-                                    <asp:ListItem Text="Select Gender" Value=""></asp:ListItem>
+                                    <asp:ListItem Text="--Select--" Value=""></asp:ListItem>
                                     <asp:ListItem Text="Male" Value="Male"></asp:ListItem>
                                     <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
-                                    <asp:ListItem Text="Others" Value="Others"></asp:ListItem>
+                                    <asp:ListItem Text="Others" Value="Female"></asp:ListItem>
+
                                 </asp:DropDownList>
                                 <br />
                             </div>
@@ -159,67 +160,31 @@
                                     <div class="col-md-4">
                                         <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text=" Update Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
                                     </div>
-                                    <div class="col-md-4">
-                                        <label>
-                                            <h6>Name :  </h6>
-                                        </label>
-                                        <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
-                                        <br />
-                                        <label>
-                                            <h6>Mobile :</h6>
-                                        </label>
-                                        <asp:Label ID="LblMobile" runat="server" Text=""></asp:Label>
-                                        <br />
-                                        <label>
-                                            <h6>Batch :</h6>
-                                        </label>
-                                        <asp:Label ID="lblBatch" runat="server" Text=""></asp:Label>
-                                        <br />
-                                        <label>
-                                            <h6>Department :</h6>
-                                        </label>
-                                        <asp:Label ID="LblDep" runat="server" Text=""></asp:Label>
-                                        <br />
-                                        <label>
-                                            <h6>JoinDate : </h6>
-                                        </label>
-                                        <asp:Label ID="LblDate" runat="server" Text=""></asp:Label>
-                                        <br />
-                                        <label>
-                                            <h6>Active :</h6>
-                                        </label>
-                                        <asp:Label ID="lblActive" runat="server" Text=""></asp:Label>
-                                        <br />
-                                    </div>
-                                    <div class="col-md-4">
-                                    </div>
-                                   
                                 </div>
-                                  <div class="row">
-                <div class="col-md-12">
-                    <div class="align-content-center">
-                        <table class="table-hover">
-                            <asp:GridView ID="GridView1" Visible="false" CssClass="table table-hover" AutoGenerateColumns="false" runat="server">
-                                <Columns>
-                                    <asp:BoundField DataField="StuID" HeaderText="ID" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="GardName" HeaderText="GaurdianName" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Mobile" HeaderText="Mobile" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Email" HeaderText="Email" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Gender" HeaderText="Gender" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Batch" HeaderText="Batch" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Departments" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="DOB" HeaderText="DOB" HeaderStyle-BackColor="WhiteSmoke" />
-                                    <asp:BoundField DataField="Address" HeaderText="Address" HeaderStyle-BackColor="WhiteSmoke" />
-                                </Columns>
-                            </asp:GridView>
-                            </table>
+                                <div class="row mt-5">
+                                    <div class="col-md-12">
+                                        <div class="align-content-center">
+                                            <table class="table-hover">
+                                                <asp:GridView ID="GridView1" Visible="true" CssClass="table table-hover" AutoGenerateColumns="false" runat="server">
+                                                    <Columns>
+                                                        <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="GardName" HeaderText="GaurdianName" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Mobile" HeaderText="Mobile" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Email" HeaderText="Email" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Gender" HeaderText="Gender" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Batch" HeaderText="Batch" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Departments" HeaderText="Department" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="DOB" HeaderText="DOB" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="Address" HeaderText="Address" HeaderStyle-BackColor="WhiteSmoke" />
+                                                    </Columns>
+                                                </asp:GridView>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     </form>
 </body>
 </html>

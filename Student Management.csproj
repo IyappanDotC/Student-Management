@@ -218,6 +218,7 @@
     <Content Include="StudentsManagement\Students\Student_Regstration.aspx" />
     <Content Include="StudentsManagement\Students\StudentList.aspx" />
     <Content Include="StudentsManagement\Students\UpdateStudents.aspx" />
+    <Content Include="StudentsManagement\Students\WebForm1.aspx" />
     <Content Include="StudentsManagement\StyleSheet1.css" />
     <Content Include="StudentsManagement\Subjects\SubjectsEntry.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -261,6 +262,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="StudentsManagement\Students\Students.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -370,6 +372,13 @@
     <Compile Include="StudentsManagement\Students\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentsManagement\Students\Students.Master.cs">
+      <DependentUpon>Students.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsManagement\Students\Students.Master.designer.cs">
+      <DependentUpon>Students.Master</DependentUpon>
+    </Compile>
     <Compile Include="StudentsManagement\Students\StudentsDel.aspx.cs">
       <DependentUpon>StudentsDel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +392,13 @@
     </Compile>
     <Compile Include="StudentsManagement\Students\UpdateStudents.aspx.designer.cs">
       <DependentUpon>UpdateStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsManagement\Students\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsManagement\Students\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

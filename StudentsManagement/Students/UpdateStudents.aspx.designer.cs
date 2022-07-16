@@ -175,60 +175,6 @@ namespace Student_Management.StudentsManagement.Students {
         protected global::System.Web.UI.WebControls.Button BtnCreate;
         
         /// <summary>
-        /// lblName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
-        
-        /// <summary>
-        /// LblMobile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMobile;
-        
-        /// <summary>
-        /// lblBatch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBatch;
-        
-        /// <summary>
-        /// LblDep control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDep;
-        
-        /// <summary>
-        /// LblDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDate;
-        
-        /// <summary>
-        /// lblActive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblActive;
-        
-        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>

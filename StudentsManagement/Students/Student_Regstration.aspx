@@ -17,6 +17,20 @@
     <script src="../../Assets/SweetAlert/sweetalert.min.js"></script>
 
 
+    <script>
+        $("Document").ready(function () {
+
+           $("btn1").text("SC")
+
+
+        })
+
+
+
+
+    </script>
+
+
 </head>
 <body>
     <!-- Header -->
@@ -155,6 +169,8 @@
                                     <asp:Button ID="BtnCreate" runat="server" OnClick="BtnCreate_Click" Text="Register Student" CssClass="btn btn-dark" Width="157px" Height="39px" /></td>
                                 </div>
                                 <div class="col-md-4">
+                                    
+
                                 </div>
                                 <div class="col-md-4">
                                 </div>

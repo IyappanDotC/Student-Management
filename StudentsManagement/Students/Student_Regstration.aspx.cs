@@ -52,6 +52,8 @@ namespace Student_Management
                     MyCmd.Parameters.AddWithValue("@Active", true);
                     MyCmd.CommandType = CommandType.StoredProcedure;
                     MyCmd.ExecuteNonQuery();
+                    Clear();
+
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "script", "swal('Student Registered' , 'Student Added Successfully ' , 'success')", true);
                     sqlconnection.Close();
                     Clear();

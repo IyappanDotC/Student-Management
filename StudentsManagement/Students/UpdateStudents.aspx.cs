@@ -37,7 +37,8 @@ namespace Student_Management.StudentsManagement.Students
             DataTable MyTable = new DataTable();
 
 
-            string MYQ = "Select StuID , a.Name as Name , Mobile, GardName,Email, Gender, Batch , Address , b.Name as Departments ,DOB from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
+            string MYQ = "Select StuID , a.Name as Name , Mobile, GardName,Email, Gender, Batch , Address , b.Name as Departments ," +
+                         "DOB from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
@@ -51,14 +52,15 @@ namespace Student_Management.StudentsManagement.Students
             if (MyTable.Rows.Count > 0)
             {
 
-                lblName.Text = MyTable.Rows[0]["Name"].ToString();
-                lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
-                LblMobile.Text = MyTable.Rows[0]["Mobile"].ToString();
-                LblDep.Text = MyTable.Rows[0]["Departments"].ToString();
-                LblDate.Text = MyTable.Rows[0]["DOB"].ToString();
-                lblName.Text = MyTable.Rows[0]["Name"].ToString();
-                lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
-                lblBatch.Text = MyTable.Rows[0]["Batch"].ToString();
+                txtName.Text = MyTable.Rows[0]["Name"].ToString();
+                txtBatch.Text = MyTable.Rows[0]["Batch"].ToString();
+                txtContact.Text = MyTable.Rows[0]["Mobile"].ToString();
+                txtDOB.Text = MyTable.Rows[0]["DOB"].ToString();
+                txtGardName.Text = MyTable.Rows[0]["GardName"].ToString();
+                txtEmail.Text = MyTable.Rows[0]["Email"].ToString();
+                txtAddress.Text = MyTable.Rows[0]["Address"].ToString();
+                ddDepart.Text = MyTable.Rows[0]["Departments"].ToString(); ;
+                DdGen.Text = MyTable.Rows[0]["Gender"].ToString(); ;
             }
 
 
