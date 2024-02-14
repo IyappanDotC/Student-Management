@@ -17,7 +17,7 @@ namespace Student_Management
         {
             if (!IsPostBack)
             {
-                String myQ = "Select StuID as ID,A.Name as Name  , Batch , DOB , B.name as Department from Students a join Departments b on a.DepartmentID = b.DepID";
+                String myQ = "Select StudentID as ID,A.StudentName as Name  , Batch , DOB , B.DepartmentName as Department from Students a join Departments b on a.DepartmentID = b.DepartmentID";
                 LoadGrid(myQ);
             }
         }

@@ -73,11 +73,11 @@
           <asp:CheckBox ID="ChkRow" runat="server"/>
           </ItemTemplate>
           </asp:TemplateField>  
-           <asp:BoundField DataField="StuID" HeaderText="Bus ID"  /> 
-             <asp:BoundField DataField="Name" HeaderText="Bus ID"  />
-            <asp:BoundField DataField="Mobile" HeaderText="Bus Name" />
-            <asp:BoundField DataField="Departments" HeaderText="Bus No" />
-            <asp:BoundField DataField="Batch" HeaderText="Category" />
+           <asp:BoundField DataField="StudentID" HeaderText="StudentID"  /> 
+             <asp:BoundField DataField="Name" HeaderText="StudentName"  />
+            <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
+            <asp:BoundField DataField="Departments" HeaderText="Department" />
+            <asp:BoundField DataField="Batch" HeaderText="Batch" />
              
       </Columns>
       </asp:GridView> 

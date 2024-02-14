@@ -156,3 +156,82 @@ D:\Dotnet\Student Management\Student Management\bin\Microsoft.Owin.Security.OAut
 D:\Dotnet\Student Management\Student Management\obj\Debug\Student Management.dll
 D:\Dotnet\Student Management\Student Management\obj\Debug\Student Management.pdb
 D:\Dotnet\Student Management\Student Management\obj\Debug\Student Management.csprojResolveAssemblyReference.cache
+E:\Projects\Student Management\Student Management\bin\ApplicationInsights.config
+E:\Projects\Student Management\Student Management\bin\roslyn\csc.exe
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\Student Management\Student Management\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\Student Management\Student Management\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\Student Management\Student Management\bin\roslyn\vbc.exe
+E:\Projects\Student Management\Student Management\bin\roslyn\VBCSCompiler.exe
+E:\Projects\Student Management\Student Management\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\Student Management\Student Management\bin\Student Management.dll.config
+E:\Projects\Student Management\Student Management\bin\Student Management.dll
+E:\Projects\Student Management\Student Management\bin\Student Management.pdb
+E:\Projects\Student Management\Student Management\bin\Antlr3.Runtime.dll
+E:\Projects\Student Management\Student Management\bin\AspNet.ScriptManager.bootstrap.dll
+E:\Projects\Student Management\Student Management\bin\AspNet.ScriptManager.jQuery.dll
+E:\Projects\Student Management\Student Management\bin\EntityFramework.dll
+E:\Projects\Student Management\Student Management\bin\EntityFramework.SqlServer.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.DependencyCollector.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.Web.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.WindowsServer.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.ApplicationInsights.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Google.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.ScriptManager.WebForms.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Student Management\Student Management\bin\Newtonsoft.Json.dll
+E:\Projects\Student Management\Student Management\bin\Owin.dll
+E:\Projects\Student Management\Student Management\bin\System.Web.Optimization.dll
+E:\Projects\Student Management\Student Management\bin\System.Web.Providers.dll
+E:\Projects\Student Management\Student Management\bin\WebGrease.dll
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.DependencyCollector.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.Web.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AI.WindowsServer.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.ApplicationInsights.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\Student Management\Student Management\bin\System.Web.Optimization.xml
+E:\Projects\Student Management\Student Management\bin\Antlr3.Runtime.pdb
+E:\Projects\Student Management\Student Management\bin\Newtonsoft.Json.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\Projects\Student Management\Student Management\bin\EntityFramework.xml
+E:\Projects\Student Management\Student Management\bin\EntityFramework.SqlServer.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Projects\Student Management\Student Management\bin\System.Web.Providers.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Google.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Projects\Student Management\Student Management\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Projects\Student Management\Student Management\obj\Debug\Student Management.dll
+E:\Projects\Student Management\Student Management\obj\Debug\Student Management.pdb
+E:\Projects\Student Management\Student Management\obj\Debug\Student Management.csprojResolveAssemblyReference.cache

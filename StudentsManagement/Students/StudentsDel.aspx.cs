@@ -28,7 +28,7 @@ namespace Student_Management
             DataTable MyTable = new DataTable();
            
 
-          string MYQ = "Select StuID , a.Name as Name , Mobile, Batch , b.Name as Departments from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
+          string MYQ = "Select StudentID , a.StudentName as Name , Mobile, Batch , b.DepartmentName as Departments from Students a join Departments b on a.DepartmentID = b.DepartmentID where a.StudentID = @ID";
 
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
@@ -62,7 +62,7 @@ namespace Student_Management
                         {
                             Sqlconnection.Open();
 
-                            string MyQ = "Delete from Students where StuID=@ID";
+                            string MyQ = "Update Students Set IsActive=0 where StudentID=@ID";
                             SqlCommand MyCmd = new SqlCommand(MyQ, Sqlconnection);
                             MyCmd.Parameters.AddWithValue("@ID" , row.Cells[1].Text);
                             MyCmd.ExecuteNonQuery();

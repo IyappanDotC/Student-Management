@@ -20,8 +20,8 @@ namespace Student_Management
                     myada.Fill(MyTable);
                 }
 
-                ddname.DataTextField = "Name";
-                ddname.DataValueField = "StuID";
+                ddname.DataTextField = "StudentName";
+                ddname.DataValueField = "StudentID";
                 ddname.DataSource = MyTable;
                 ddname.DataBind();
             }

@@ -13,11 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light shadow-lg">
         <div class="container-fluid">
 
             <a class="navbar-brand" href="../admin.aspx">Home</a>
@@ -65,10 +66,10 @@
             <asp:BoundField DataField="DOB" HeaderText="JoinDate" />
             <asp:BoundField DataField="Department" HeaderText="Department" />
 
-             <asp:TemplateField HeaderText="Update" ControlStyle-CssClass="btn btn-dark" >
+             <asp:TemplateField HeaderText="Update" ControlStyle-CssClass="btn btn-primary" >
      <ItemTemplate>
                 <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("/StudentsManagement/Students/UpdateStudents.aspx?ID={0}",
-                    HttpUtility.HtmlEncode (Eval("ID").ToString()))%>'>Update Student</asp:HyperLink>
+                    HttpUtility.HtmlEncode (Eval("ID").ToString()))%>'><i class="fa fa-pencil-square" style="font-size:12px" aria-hidden="true"></i></asp:HyperLink>
      </ItemTemplate>
       </asp:TemplateField>   
             <asp:TemplateField HeaderText="Delete" ControlStyle-CssClass="btn btn-danger" >

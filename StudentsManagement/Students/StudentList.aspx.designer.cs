@@ -31,15 +31,6 @@ namespace Student_Management {
         protected global::System.Web.UI.WebControls.GridView StudentsGrid;
         
         /// <summary>
-        /// txtError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtError;
-        
-        /// <summary>
         /// f control.
         /// </summary>
         /// <remarks>

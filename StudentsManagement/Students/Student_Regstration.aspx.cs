@@ -21,10 +21,10 @@ namespace Student_Management
                         SqlDataAdapter myada = new SqlDataAdapter("select * from Departments ", Sqlconnection);
                         myada.Fill(MyTable);
                     }
-                    ddDepart.DataTextField = "Name";
-                    ddDepart.DataValueField = "DepID";
-                    ddDepart.DataSource = MyTable;
-                    ddDepart.DataBind();
+                    ddlDepartment.DataTextField = "DepartmentName";
+                    ddlDepartment.DataValueField = "DepartmentID";
+                    ddlDepartment.DataSource = MyTable;
+                    ddlDepartment.DataBind();
                 }
             }
         }
@@ -40,16 +40,18 @@ namespace Student_Management
 
                     string InstQ = "InsertStudents";
                     SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
-                    MyCmd.Parameters.AddWithValue("@name", txtName.Text);
-                    MyCmd.Parameters.AddWithValue("@GardName ", txtGardName.Text);
-                    MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
-                    MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
-                    MyCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                    MyCmd.Parameters.AddWithValue("@Gender", DdGen.SelectedValue);
-                    MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
-                    MyCmd.Parameters.AddWithValue("@DOB", txtDOB.Text);
-                    MyCmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-                    MyCmd.Parameters.AddWithValue("@Active", true);
+
+                    var AddStudents = MyCmd.Parameters;
+                    AddStudents.AddWithValue("@name", txtName.Text);
+                    AddStudents.AddWithValue("@GardName ", txtGuardianName.Text);
+                    AddStudents.AddWithValue("@Mobile", txtContact.Text);
+                    AddStudents.AddWithValue("@Batch", txtBatch.Text);
+                    AddStudents.AddWithValue("@Email", txtEmail.Text);
+                    AddStudents.AddWithValue("@Gender", ddlDepartment.SelectedValue);
+                    AddStudents.AddWithValue("@DepartmentID", ddlDepartment.SelectedValue);
+                    AddStudents.AddWithValue("@DOB", txtDOB.Text);
+                    AddStudents.AddWithValue("@Address", txtAddress.Text);
+                    AddStudents.AddWithValue("@Active", true);
                     MyCmd.CommandType = CommandType.StoredProcedure;
                     MyCmd.ExecuteNonQuery();
                     Clear();
@@ -70,7 +72,7 @@ namespace Student_Management
             txtName.Text = "";
             txtContact.Text = "";
             txtBatch.Text = "";
-            txtGardName.Text = "";
+            txtGuardianName.Text = "";
             txtDOB.Text = "";
             txtAddress.Text = "";
         }
@@ -87,9 +89,9 @@ namespace Student_Management
             using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
             {
                 Sqlconnection.Open();
-                SqlDataAdapter myada = new SqlDataAdapter("select * from Students where Name=@name and GardName=@GardName", Sqlconnection);
+                SqlDataAdapter myada = new SqlDataAdapter("select * from Students where StudentName=@name and GuardianName=@GardName", Sqlconnection);
                 myada.SelectCommand.Parameters.AddWithValue("@name", txtName.Text);
-                myada.SelectCommand.Parameters.AddWithValue("@GardName", txtGardName.Text);
+                myada.SelectCommand.Parameters.AddWithValue("@GardName", txtGuardianName.Text);
                 
                 myada.Fill(MyTable);
                 Sqlconnection.Close();

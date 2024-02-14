@@ -34,9 +34,8 @@ namespace Student_Management
                 }
                 catch
                 {
-                    txtError.Text = "Error in loading database please check later ";
+                    //txtError.Text = "Error in loading database please check later ";
                 }
-
 
                 }
                

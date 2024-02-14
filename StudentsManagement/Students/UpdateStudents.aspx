@@ -168,7 +168,7 @@
                                                 <asp:GridView ID="GridView1" Visible="true" CssClass="table table-hover" AutoGenerateColumns="false" runat="server">
                                                     <Columns>
                                                         <asp:BoundField DataField="Name" HeaderText="Name" HeaderStyle-BackColor="WhiteSmoke" />
-                                                        <asp:BoundField DataField="GardName" HeaderText="GaurdianName" HeaderStyle-BackColor="WhiteSmoke" />
+                                                        <asp:BoundField DataField="GuardianName" HeaderText="GuardianName" HeaderStyle-BackColor="WhiteSmoke" />
                                                         <asp:BoundField DataField="Mobile" HeaderText="Mobile" HeaderStyle-BackColor="WhiteSmoke" />
                                                         <asp:BoundField DataField="Email" HeaderText="Email" HeaderStyle-BackColor="WhiteSmoke" />
                                                         <asp:BoundField DataField="Gender" HeaderText="Gender" HeaderStyle-BackColor="WhiteSmoke" />

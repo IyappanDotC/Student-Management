@@ -22,7 +22,7 @@ namespace Student_Management
 
                     using (SqlConnection Sqlconnection = new SqlConnection(Con))
                     {
-                        SqlDataAdapter myada = new SqlDataAdapter("select StuID as ID , a.Name as Name , Mobile ,Batch , DOB , b.Name as Department from Students a join Departments b on a.DepartmentID = b.DepID", Sqlconnection);
+                        SqlDataAdapter myada = new SqlDataAdapter("select StudentID as ID , a.StudentName as Name , Mobile ,Batch , DOB , b.DepartmentName as Department from Students a join Departments b on a.DepartmentID = b.DepartmentID", Sqlconnection);
                         myada.Fill(MyTable);
                     }
 

@@ -18,38 +18,45 @@ namespace Student_Management.StudentsManagement
         protected void BtnCreate_Click(object sender, EventArgs e)
         {
 
-
-            string MyCon = @"Data Source =.; Initial Catalog = IYDataBase; Integrated Security =SSPI ";
+            
+            string MyCon = @"Data Source =.; Initial Catalog = STMT; Integrated Security =SSPI ";
 
             using (SqlConnection sqlconnection = new SqlConnection(MyCon))
             {
-                sqlconnection.Open();
+                try
+                {
+                    sqlconnection.Open();
 
-                string InstQ = " insert into UserLogin (Name , UserID, Age, Phone, Gender,Password) Values (@Name , @UserID, @Age, @Phone, @Gender,@Password)";
-                SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
-                MyCmd.Parameters.AddWithValue("@name", txtName.Text);
-                MyCmd.Parameters.AddWithValue("@UserID", txtUserID.Text);
-                MyCmd.Parameters.AddWithValue("@Age", txtAge.Text);
-                MyCmd.Parameters.AddWithValue("@Phone", txtPhone.Text);
-                MyCmd.Parameters.AddWithValue("@Gender", Ddgen.SelectedValue);
-                MyCmd.Parameters.AddWithValue("@Password", txtPass.Text);
+                    string InstQ = "INSERT INTO UserLogin (Name, UserID, Age, Phone, Gender, Password) VALUES (@Name, @UserID, @Age, @Phone, @Gender, @Password)";
+                    SqlCommand MyCmd = new SqlCommand(InstQ, sqlconnection);
+                    MyCmd.Parameters.AddWithValue("@Name", txtName.Text);
+                    MyCmd.Parameters.AddWithValue("@UserID", txtUserID.Text);
+                    MyCmd.Parameters.AddWithValue("@Age", txtAge.Text);
+                    MyCmd.Parameters.AddWithValue("@Phone", txtPhone.Text);
+                    MyCmd.Parameters.AddWithValue("@Gender", Ddgen.SelectedValue);
+                    MyCmd.Parameters.AddWithValue("@Password", txtPass.Text);
 
-                MyCmd.ExecuteNonQuery();
+                    MyCmd.ExecuteNonQuery();
 
-                sqlconnection.Close();
-
-                txtName.Text = "";
-                txtUserID.Text = "";
-                txtAge.Text = "";
-                txtPhone.Text = "";
-                Ddgen.SelectedValue = "";
-                txtPass.Text = "";
-
-
-                
-
-
+                    // Clear input fields
+                    txtName.Text = "";
+                    txtUserID.Text = "";
+                    txtAge.Text = "";
+                    txtPhone.Text = "";
+                    Ddgen.ClearSelection(); // Clear the selected value for a DropDownList
+                    txtPass.Text = "";
+                }
+                catch (Exception ex)
+                {
+                     
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                    
+                }
             }
+
+
+
         }
+ 
     }
 }

@@ -1,111 +1,127 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Student_Management.StudentsManagement.Students
 {
     public partial class UpdateStudents : System.Web.UI.Page
     {
+        private string connectionString = @"Data Source=.; Initial Catalog=STMT; Integrated Security=SSPI";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                DataTable MyTable = new DataTable();
+                BindDepartments();
+                LoadStudentDetails();
+            }
+        }
 
-                using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+        private void BindDepartments()
+        {
+            DataTable departmentTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT DepartmentID, DepartmentName FROM Departments";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(departmentTable);
+            }
+
+            ddDepart.DataTextField = "DepartmentName";
+            ddDepart.DataValueField = "DepartmentID";
+            ddDepart.DataSource = departmentTable;
+            ddDepart.DataBind();
+        }
+
+        private void LoadStudentDetails()
+        {
+            string studentId = Request.QueryString["ID"];
+            if (!string.IsNullOrEmpty(studentId))
+            {
+                DataTable studentTable = new DataTable();
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    SqlDataAdapter myada = new SqlDataAdapter("select * from Departments ", Sqlconnection);
-                    myada.Fill(MyTable);
+                    string query = @"SELECT s.StudentID, s.StudentName AS Name, s.Mobile, s.GuardianName, 
+                                    s.Email, s.Gender, s.Batch, s.Address, d.DepartmentName AS DepartmentName, 
+                                    s.DOB FROM Students s JOIN Departments d ON s.DepartmentID = d.DepartmentID 
+                                    WHERE s.StudentID = @StudentID";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.AddWithValue("@StudentID", studentId);
+                    adapter.Fill(studentTable);
                 }
-                ddDepart.DataTextField = "Name";
-                ddDepart.DataValueField = "DepID";
-                ddDepart.DataSource = MyTable;
-                ddDepart.DataBind();
+
+                if (studentTable.Rows.Count > 0)
+                {
+                    DataRow row = studentTable.Rows[0];
+                    txtName.Text = row["Name"].ToString();
+                    txtBatch.Text = row["Batch"].ToString();
+                    txtContact.Text = row["Mobile"].ToString();
+                    txtDOB.Text = row["DOB"].ToString();
+                    txtGardName.Text = row["GuardianName"].ToString();
+                    txtEmail.Text = row["Email"].ToString();
+                    txtAddress.Text = row["Address"].ToString();
+                    ddDepart.SelectedValue = row["DepartmentID"].ToString();
+                    DdGen.SelectedValue = row["Gender"].ToString();
+                }
             }
-            LoadGrid();
-
         }
-        private void LoadGrid()
 
+        protected void BtnUpdate_Click(object sender, EventArgs e)
         {
-
-            DataTable MyTable = new DataTable();
-
-
-            string MYQ = "Select StuID , a.Name as Name , Mobile, GardName,Email, Gender, Batch , Address , b.Name as Departments ," +
-                         "DOB from Students a join Departments b on a.DepartmentID = b.DepID where a.StuID = @ID";
-
-            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
+            try
             {
-                SqlDataAdapter myada = new SqlDataAdapter(MYQ, Sqlconnection);
-                myada.SelectCommand.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
-                myada.Fill(MyTable);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = @"UPDATE Students SET StudentName = @Name, Mobile = @Mobile, Batch = @Batch, 
+                                    Email = @Email, GuardianName = @GuardianName, Address = @Address, 
+                                    Gender = @Gender, DepartmentID = @DepartmentID, DOB = @DOB, 
+                                    IsActive = @IsActive WHERE StudentID = @StudentID";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@StudentID", Request.QueryString["ID"]);
+                    command.Parameters.AddWithValue("@Name", txtName.Text);
+                    command.Parameters.AddWithValue("@Mobile", txtContact.Text);
+                    command.Parameters.AddWithValue("@Batch", txtBatch.Text);
+                    command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    command.Parameters.AddWithValue("@GuardianName", txtGardName.Text);
+                    command.Parameters.AddWithValue("@Address", txtAddress.Text);
+                    command.Parameters.AddWithValue("@Gender", DdGen.SelectedValue);
+                    command.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
+                    command.Parameters.AddWithValue("@DOB", txtDOB.Text);
+                    command.Parameters.AddWithValue("@IsActive", true);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+
+                ClearControls();
+                // Optionally, you can redirect the user to a different page after successful update.
+                // Response.Redirect("SuccessPage.aspx");
             }
-            GridView1.DataSource = MyTable;
-            GridView1.DataBind();
-
-            if (MyTable.Rows.Count > 0)
+            catch (Exception ex)
             {
-
-                txtName.Text = MyTable.Rows[0]["Name"].ToString();
-                txtBatch.Text = MyTable.Rows[0]["Batch"].ToString();
-                txtContact.Text = MyTable.Rows[0]["Mobile"].ToString();
-                txtDOB.Text = MyTable.Rows[0]["DOB"].ToString();
-                txtGardName.Text = MyTable.Rows[0]["GardName"].ToString();
-                txtEmail.Text = MyTable.Rows[0]["Email"].ToString();
-                txtAddress.Text = MyTable.Rows[0]["Address"].ToString();
-                ddDepart.Text = MyTable.Rows[0]["Departments"].ToString(); ;
-                DdGen.Text = MyTable.Rows[0]["Gender"].ToString(); ;
-            }
-
-
-        }
-        private string MyConnection()
-        {
-            return @"Data Source =.; Initial Catalog =STMT; Integrated Security =SSPI ";
-        }
-
-        protected void BtnCreate_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection Sqlconnection = new SqlConnection(MyConnection()))
-            {
-                string UpdQ = "Update students set Name = @name , Mobile=@Mobile ,Batch=@Batch ,Email=@Email, GardName=@GardName , Address=@Address , Gender=@Gender ,DepartmentID=@DepartmentID , DOB=@DOB, Active=@Active where StuID=@ID";
-                SqlCommand MyCmd = new SqlCommand(UpdQ, Sqlconnection);
-                Sqlconnection.Open();
-
-
-                MyCmd.Parameters.AddWithValue("@ID", Request.QueryString["ID"]);
-
-                MyCmd.Parameters.AddWithValue("@name", txtName.Text);
-                MyCmd.Parameters.AddWithValue("@GardName ", txtGardName.Text);
-                MyCmd.Parameters.AddWithValue("@Mobile", txtContact.Text);
-                MyCmd.Parameters.AddWithValue("@Batch", txtBatch.Text);
-                MyCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                MyCmd.Parameters.AddWithValue("@Gender", DdGen.SelectedValue);
-                MyCmd.Parameters.AddWithValue("@DepartmentID", ddDepart.SelectedValue);
-                MyCmd.Parameters.AddWithValue("@DOB", txtDOB.Text);
-                MyCmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-                MyCmd.Parameters.AddWithValue("@Active", true);
-                MyCmd.ExecuteNonQuery();
-                Sqlconnection.Close();
-                Clear();
-                LoadGrid();
-
-
+                // Handle the error appropriately, e.g., show a message to the user or log the error.
+                // You can display an error message on the page or log the exception details for debugging.
+                // For simplicity, I'm just logging the exception to the console.
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
-        private void Clear()
+
+        private void ClearControls()
         {
             txtName.Text = "";
             txtContact.Text = "";
             txtBatch.Text = "";
             txtDOB.Text = "";
             txtEmail.Text = "";
+            txtGardName.Text = "";
+            txtAddress.Text = "";
+            ddDepart.SelectedIndex = -1;
+            DdGen.SelectedIndex = -1;
         }
     }
 }
